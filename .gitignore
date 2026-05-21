@@ -1,0 +1,12 @@
+# KiCad local history
+electrical/.history/
+
+# KiCad backup files
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-backups/
+fp-info-cache
+*.kicad_prl
+
+# Claude Code local settings
+.claude/
