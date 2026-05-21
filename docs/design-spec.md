@@ -2,7 +2,7 @@
 
 ## Overview
 
-A LED lamp system using an ESP32-C6 running WLED firmware to control both an RGB addressable strip and a warm white strip. The controller PCB is shared across lamp variants; only the power supply and strip lengths differ.
+A LED lamp system using an ESP8266 (Wemos D1 Mini) running WLED firmware to control both an RGB addressable strip and a warm white strip. The controller PCB is shared across lamp variants; only the power supply and strip lengths differ.
 
 ## LED Strips
 
@@ -27,10 +27,14 @@ A LED lamp system using an ESP32-C6 running WLED firmware to control both an RGB
 - Firmware: WLED
 - Form factor: D1 Mini plugs into female pin headers on the carrier PCB
 - Power: 5V pin fed from 12V→5V regulator on carrier board
-- RGB output: GPIO2 (D4) → level shifter → WS2811 data (1-wire protocol)
-- White output: GPIO4 (D2) → PWM via IRLB8721 N-channel MOSFET (analog dimming)
-  - Vds: 30V, Id: 62A, Rds(on): ~8.7mΩ @ 4.5V Vgs
+- RGB output 1: GPIO2 (D4) → level shifter (2N7000) → WS2811 data shelf 1
+- RGB output 2: GPIO3 (RX) → level shifter (2N7000) → WS2811 data shelf 2
+- White output 1: GPIO4 (D2) → PWM via IRLB8721 N-channel MOSFET (shelf 1)
+- White output 2: GPIO5 (D1) → PWM via IRLB8721 N-channel MOSFET (shelf 2)
+- Level shifter: 2N7000 N-MOSFET with 4.7kΩ pull-up to 5V, 330Ω series output
+- MOSFET: IRLB8721 (Vds: 30V, Id: 62A, Rds(on): ~8.7mΩ @ 4.5V Vgs)
   - Logic-level gate: fully on at 3.3V (compatible with ESP8266 GPIO)
+  - 100Ω gate resistor, 10kΩ pull-down
 
 ## Lamp Variants
 
@@ -60,10 +64,26 @@ A LED lamp system using an ESP32-C6 running WLED firmware to control both an RGB
 
 - PCB/Schematic: KiCad 10
 
+## GPIO Pin Map
+
+| GPIO | D1 Mini Label | Function |
+|------|---------------|----------|
+| 2 | D4 | RGB data shelf 1 |
+| 3 | RX | RGB data shelf 2 |
+| 4 | D2 | White PWM shelf 1 |
+| 5 | D1 | White PWM shelf 2 |
+
+Note: GPIO3 (RX) is repurposed as LED output — serial receive disabled after WLED configuration.
+
+## Resolved Decisions
+
+- ESP module: Wemos D1 Mini (ESP8266)
+- MOSFET: IRLB8721 (TO-220)
+- Level shifter: 2N7000 (TO-92)
+- Connectors: 5mm pitch screw terminals
+- Voltage regulator: 7805 (12V → 5V for D1 Mini)
+
 ## Open Questions
 
-- ~~ESP module selection~~ → Wemos D1 Mini (ESP8266, confirmed)
-- ~~MOSFET selection for white strip PWM~~ → IRLB8721 (confirmed)
-- Connector types for strip hookup
 - Enclosure / mounting strategy per variant
 - Power injection method for synth wall variant
