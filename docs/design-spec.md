@@ -2,7 +2,7 @@
 
 ## Overview
 
-A LED lamp system using an ESP8266 (Wemos D1 Mini) running WLED firmware to control both an RGB addressable strip and a warm white strip. The controller PCB is shared across lamp variants; only the power supply and strip lengths differ.
+A LED lamp system using an ESP32 (NodeMCU 38-pin devkit) running WLED firmware to control both an RGB addressable strip and a warm white strip. The controller PCB is shared across lamp variants; only the power supply and strip lengths differ.
 
 ## LED Strips
 
@@ -23,17 +23,17 @@ A LED lamp system using an ESP8266 (Wemos D1 Mini) running WLED firmware to cont
 
 ## Controller
 
-- MCU: ESP8266 (Wemos D1 Mini)
+- MCU: ESP32 (Joy-IT SBC-NodeMCU-ESP32, 30-pin devkit)
 - Firmware: WLED
-- Form factor: D1 Mini plugs into female pin headers on the carrier PCB
+- Form factor: NodeMCU plugs into 2×15 female pin headers on the carrier PCB
 - Power: 5V pin fed from 12V→5V regulator on carrier board
-- RGB output 1: GPIO2 (D4) → level shifter (2N7000) → WS2811 data shelf 1
-- RGB output 2: GPIO3 (RX) → level shifter (2N7000) → WS2811 data shelf 2
-- White output 1: GPIO4 (D2) → PWM via IRLB8721 N-channel MOSFET (shelf 1)
-- White output 2: GPIO5 (D1) → PWM via IRLB8721 N-channel MOSFET (shelf 2)
+- RGB output 1: GPIO16 → level shifter (2N7000) → WS2811 data shelf 1
+- RGB output 2: GPIO17 → level shifter (2N7000) → WS2811 data shelf 2
+- White output 1: GPIO18 → PWM via IRLB8721 N-channel MOSFET (shelf 1)
+- White output 2: GPIO19 → PWM via IRLB8721 N-channel MOSFET (shelf 2)
 - Level shifter: 2N7000 N-MOSFET with 4.7kΩ pull-up to 5V, 330Ω series output
 - MOSFET: IRLB8721 (Vds: 30V, Id: 62A, Rds(on): ~8.7mΩ @ 4.5V Vgs)
-  - Logic-level gate: fully on at 3.3V (compatible with ESP8266 GPIO)
+  - Logic-level gate: fully on at 3.3V (compatible with ESP32 GPIO)
   - 100Ω gate resistor, 10kΩ pull-down
 
 ## Lamp Variants
@@ -66,22 +66,23 @@ A LED lamp system using an ESP8266 (Wemos D1 Mini) running WLED firmware to cont
 
 ## GPIO Pin Map
 
-| GPIO | D1 Mini Label | Function |
-|------|---------------|----------|
-| 2 | D4 | RGB data shelf 1 |
-| 3 | RX | RGB data shelf 2 |
-| 4 | D2 | White PWM shelf 1 |
-| 5 | D1 | White PWM shelf 2 |
+| GPIO | NodeMCU Pin | Function |
+|------|-------------|----------|
+| 16   | GPIO16      | RGB data shelf 1 |
+| 17   | GPIO17      | RGB data shelf 2 |
+| 18   | GPIO18      | White PWM shelf 1 |
+| 19   | GPIO19      | White PWM shelf 2 |
+| 23   | GPIO23      | WLED button (active low, internal pull-up) |
 
-Note: GPIO3 (RX) is repurposed as LED output — serial receive disabled after WLED configuration.
+Note: All selected GPIOs are free of boot-mode side effects and support RMT (for addressable LEDs) and LEDC PWM (for white strips). GPIO0 is not exposed on the 30-pin board's headers (only accessible via onboard BOOT button), so GPIO23 is used for the external WLED button instead. GPIO 6–11 are reserved for internal flash and must not be used.
 
 ## Resolved Decisions
 
-- ESP module: Wemos D1 Mini (ESP8266)
+- ESP module: Joy-IT SBC-NodeMCU-ESP32 (30-pin devkit, 2×15 headers)
 - MOSFET: IRLB8721 (TO-220)
 - Level shifter: 2N7000 (TO-92)
 - Connectors: 5mm pitch screw terminals
-- Voltage regulator: 7805 (12V → 5V for D1 Mini)
+- Voltage regulator: 7805 (12V → 5V for ESP32)
 
 ## Open Questions
 

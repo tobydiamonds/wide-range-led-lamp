@@ -8,5 +8,8 @@ electrical/.history/
 fp-info-cache
 *.kicad_prl
 
+# KiCad lock files
+*.lck
+
 # Claude Code local settings
 .claude/

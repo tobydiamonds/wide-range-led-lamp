@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "WideRangeLEDLamp") (type "KiCad") (uri "${KIPRJMOD}/WideRangeLEDLamp.pretty") (options "") (descr ""))
+)

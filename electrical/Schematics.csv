@@ -1,0 +1,17 @@
+"ID";"Betegnelse";"Fodaftryk";"Antal";"Betegnelse";"Leverandør og ref";
+1;"C1, C3";"CP_Radial_D6.3mm_P2.50mm";2;"100uF";;;
+2;"C2, C4";"C_Disc_D5.0mm_W2.5mm_P5.00mm";2;"100nF";;;
+3;"J1";"TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal";1;"12V_IN";;;
+4;"J2";"TerminalBlock_Xinya_XY308-2.54-3P_1x03_P2.54mm_Horizontal";1;"RGB_STRIP_1";;;
+5;"J3";"TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal";1;"WHITE_STRIP_1";;;
+6;"J4";"TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal";1;"WHITE_STRIP_2";;;
+7;"J5";"TerminalBlock_Xinya_XY308-2.54-3P_1x03_P2.54mm_Horizontal";1;"RGB_STRIP_2";;;
+8;"Q1, Q3";"TO-220-3_Vertical";2;"IRLB8721PBF";;;
+9;"Q2, Q4";"TO-92_Inline";2;"2N7000";;;
+10;"R1, R5";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";2;"R100";;;
+11;"R2, R6";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";2;"R10K";;;
+12;"R3, R7";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";2;"R4K7";;;
+13;"R4, R8";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";2;"R330";;;
+14;"SW1";"SW_PUSH_6mm";1;"BTN";;;
+15;"U1";"TO-220-3_Vertical";1;"L7805";;;
+16;"U2";"WEMOS_D1_mini_light";1;"WEMOS_D1_mini";;;
