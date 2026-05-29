@@ -27,11 +27,11 @@ A LED lamp system using an ESP32 (NodeMCU 38-pin devkit) running WLED firmware t
 - Firmware: WLED
 - Form factor: NodeMCU plugs into 2×15 female pin headers on the carrier PCB
 - Power: 5V pin fed from 12V→5V regulator on carrier board
-- RGB output 1: GPIO16 → level shifter (2N7000) → WS2811 data shelf 1
-- RGB output 2: GPIO17 → level shifter (2N7000) → WS2811 data shelf 2
-- White output 1: GPIO18 → PWM via IRLB8721 N-channel MOSFET (shelf 1)
-- White output 2: GPIO19 → PWM via IRLB8721 N-channel MOSFET (shelf 2)
-- Level shifter: 2N7000 N-MOSFET with 4.7kΩ pull-up to 5V, 330Ω series output
+- RGB output 1: GPIO26 → 330Ω series resistor → WS2811 data shelf 1
+- RGB output 2: GPIO33 → 330Ω series resistor → WS2811 data shelf 2
+- White output 1: GPIO27 → PWM via IRLB8721 N-channel MOSFET (shelf 1)
+- White output 2: GPIO25 → PWM via IRLB8721 N-channel MOSFET (shelf 2)
+- RGB signal: Direct 3.3V drive with 330Ω series resistor (no level shifter — tested OK with WS2811 at 3.3V)
 - MOSFET: IRLB8721 (Vds: 30V, Id: 62A, Rds(on): ~8.7mΩ @ 4.5V Vgs)
   - Logic-level gate: fully on at 3.3V (compatible with ESP32 GPIO)
   - 100Ω gate resistor, 10kΩ pull-down
@@ -68,10 +68,10 @@ A LED lamp system using an ESP32 (NodeMCU 38-pin devkit) running WLED firmware t
 
 | GPIO | NodeMCU Pin | Function |
 |------|-------------|----------|
-| 16   | GPIO16      | RGB data shelf 1 |
-| 17   | GPIO17      | RGB data shelf 2 |
-| 18   | GPIO18      | White PWM shelf 1 |
-| 19   | GPIO19      | White PWM shelf 2 |
+| 26   | D26         | RGB data shelf 1 |
+| 33   | D33         | RGB data shelf 2 |
+| 27   | D27         | White PWM shelf 1 |
+| 25   | D25         | White PWM shelf 2 |
 | 23   | GPIO23      | WLED button (active low, internal pull-up) |
 
 Note: All selected GPIOs are free of boot-mode side effects and support RMT (for addressable LEDs) and LEDC PWM (for white strips). GPIO0 is not exposed on the 30-pin board's headers (only accessible via onboard BOOT button), so GPIO23 is used for the external WLED button instead. GPIO 6–11 are reserved for internal flash and must not be used.
@@ -80,9 +80,31 @@ Note: All selected GPIOs are free of boot-mode side effects and support RMT (for
 
 - ESP module: Joy-IT SBC-NodeMCU-ESP32 (30-pin devkit, 2×15 headers)
 - MOSFET: IRLB8721 (TO-220)
-- Level shifter: 2N7000 (TO-92)
-- Connectors: 5mm pitch screw terminals
+- RGB signal protection: 330Ω series resistor (no level shifter needed)
+- Shelf connectors: 2× 4-pin (pin 1: 12V red, pin 2: RGB data white, pin 3: PWM grey, pin 4: GND brown)
 - Voltage regulator: 7805 (12V → 5V for ESP32)
+
+## WLED Configuration
+
+### LED Outputs (Config → LED Preferences)
+
+| Output | Type | GPIO | Color Order | Start | Length |
+|--------|------|------|-------------|-------|--------|
+| 1 | WS281x | 26 | BRG | 0 | 50 |
+| 2 | PWM White | 27 | — | 50 | 1 |
+
+(Shelf 2 would add outputs 3+4 on GPIO33 and GPIO25 with appropriate start offsets)
+
+### Segments
+
+| Segment | Start | Stop | Function |
+|---------|-------|------|----------|
+| 0 | 0 | 50 | RGB shelf 1 |
+| 1 | 50 | 51 | White shelf 1 |
+
+### Boot preset
+
+Save desired state as **Preset 0** (WLED applies preset 0 at boot by default).
 
 ## Open Questions
 

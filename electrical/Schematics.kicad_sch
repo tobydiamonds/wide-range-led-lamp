@@ -1144,320 +1144,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:2N7000"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "2N7000"
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-				(at 5.08 -1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-				)
-			)
-			(property "Datasheet" "https://www.vishay.com/docs/70226/70226.pdf"
-				(at 5.08 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Description" "0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "N-Channel MOSFET Logic-Level"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "TO?92*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "2N7000_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "2N7000_1_1"
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Transistor_FET:IRLB8721PBF"
 			(pin_names
 				(hide yes)
@@ -2541,18 +2227,6 @@
 		(uuid "0d313378-8778-4ca2-a4ec-a57c88a6a6f5")
 	)
 	(junction
-		(at 213.36 74.93)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "109c40a3-d943-4461-84ef-32e01793388d")
-	)
-	(junction
-		(at 121.92 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "239cf6a0-930a-476b-be1b-e26b2b255919")
-	)
-	(junction
 		(at 219.71 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2601,12 +2275,6 @@
 		(uuid "9d34b851-241e-4498-853b-4875d2709e51")
 	)
 	(junction
-		(at 213.36 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9ec092ea-938b-4665-b6b0-c69c640599e0")
-	)
-	(junction
 		(at 219.71 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2645,6 +2313,10 @@
 	(no_connect
 		(at 124.46 55.88)
 		(uuid "5df59b20-63b2-4626-95fb-5146f265743e")
+	)
+	(no_connect
+		(at 124.46 40.64)
+		(uuid "60c4fa2d-58f0-4c64-96b6-48181ba606e7")
 	)
 	(no_connect
 		(at 160.02 76.2)
@@ -2744,7 +2416,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 62.23) (xy 213.36 62.23)
+			(xy 199.39 48.26) (xy 223.52 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2774,17 +2446,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 49.53) (xy 213.36 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b4b28bd-1327-4715-a927-3baa6a4841f3")
-	)
-	(wire
-		(pts
-			(xy 236.22 74.93) (xy 246.38 74.93)
+			(xy 229.87 74.93) (xy 246.38 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2804,7 +2466,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 74.93) (xy 228.6 74.93)
+			(xy 199.39 74.93) (xy 222.25 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2834,16 +2496,6 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 62.23) (xy 213.36 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "368840fb-9c8a-4b4a-a885-0809c28dfb6d")
-	)
-	(wire
-		(pts
 			(xy 219.71 120.65) (xy 219.71 125.73)
 		)
 		(stroke
@@ -2864,7 +2516,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 48.26) (xy 246.38 48.26)
+			(xy 231.14 48.26) (xy 246.38 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2884,16 +2536,6 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 81.28) (xy 205.74 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48783f1f-c3b3-471a-b14d-8c734a1bb565")
-	)
-	(wire
-		(pts
 			(xy 160.02 66.04) (xy 165.1 66.04)
 		)
 		(stroke
@@ -2904,36 +2546,6 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 88.9) (xy 213.36 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49f11c58-d644-4bc6-953a-46d49b29ac31")
-	)
-	(wire
-		(pts
-			(xy 198.12 54.61) (xy 205.74 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e8817d7-c1c2-40f0-9262-41f65011fcb4")
-	)
-	(wire
-		(pts
-			(xy 213.36 72.39) (xy 213.36 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f4dee86-7aae-4848-8612-6f3a85c1a873")
-	)
-	(wire
-		(pts
 			(xy 68.58 68.58) (xy 81.28 68.58)
 		)
 		(stroke
@@ -2941,16 +2553,6 @@
 			(type default)
 		)
 		(uuid "5268bdee-b8a5-4801-82e4-a18c70ef9399")
-	)
-	(wire
-		(pts
-			(xy 213.36 76.2) (xy 213.36 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63a21bb7-529b-4c4d-8a8c-47b39aeba320")
 	)
 	(wire
 		(pts
@@ -3054,16 +2656,6 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 48.26) (xy 228.6 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a29736c0-eace-4f79-8043-d6198edcbb45")
-	)
-	(wire
-		(pts
 			(xy 219.71 109.22) (xy 223.52 109.22)
 		)
 		(stroke
@@ -3114,36 +2706,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 40.64) (xy 124.46 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6e80bb4-45e7-4cf0-94f1-dcb960f153d8")
-	)
-	(wire
-		(pts
-			(xy 198.12 45.72) (xy 205.74 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8c37a5a-d209-40eb-bb73-4baaa3807dd2")
-	)
-	(wire
-		(pts
-			(xy 118.11 40.64) (xy 121.92 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca3c2157-6d31-4556-8b49-5929c2c3d5a6")
-	)
-	(wire
-		(pts
 			(xy 160.02 43.18) (xy 165.1 43.18)
 		)
 		(stroke
@@ -3171,16 +2733,6 @@
 			(type default)
 		)
 		(uuid "cdae546c-5efa-4312-8fc1-2e859a5b847f")
-	)
-	(wire
-		(pts
-			(xy 198.12 72.39) (xy 205.74 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8363404-e670-4ce3-915a-015dd04187f0")
 	)
 	(wire
 		(pts
@@ -3251,16 +2803,6 @@
 			(type default)
 		)
 		(uuid "e6590a2d-49ce-407c-a93a-89769333e266")
-	)
-	(wire
-		(pts
-			(xy 213.36 45.72) (xy 213.36 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7c407de-156c-4508-aa5e-00e954af18fa")
 	)
 	(wire
 		(pts
@@ -3344,16 +2886,6 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 88.9) (xy 213.36 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb70ea97-d184-440d-8d6d-b21448897c0d")
-	)
-	(wire
-		(pts
 			(xy 45.72 68.58) (xy 34.29 68.58)
 		)
 		(stroke
@@ -3412,16 +2944,6 @@
 		)
 		(uuid "1fd04780-9e0a-4963-b43d-75998b6fab52")
 	)
-	(label "+3V3"
-		(at 198.12 54.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "266fb57b-0c50-4c90-bbb9-97672f23b6ed")
-	)
 	(label "GND"
 		(at 34.29 76.2 0)
 		(effects
@@ -3431,16 +2953,6 @@
 			(justify left bottom)
 		)
 		(uuid "35d23abb-6eb4-4c19-9af0-8a5f30d76990")
-	)
-	(label "+5V"
-		(at 198.12 72.39 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "39a66deb-0541-4565-b367-4f68360239b0")
 	)
 	(label "WHITE_PWM_1"
 		(at 165.1 60.96 0)
@@ -3461,16 +2973,6 @@
 			(justify left bottom)
 		)
 		(uuid "45914c9a-4b47-4a9c-a1e9-04cd0ab8b5ff")
-	)
-	(label "+5V"
-		(at 198.12 45.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "46660865-99d4-41f8-a244-906538869b67")
 	)
 	(label "RGB_DATA_1"
 		(at 165.1 68.58 0)
@@ -3573,7 +3075,7 @@
 		(uuid "8490b0a0-275f-424f-9b00-0afc290a17c1")
 	)
 	(label "RGB_DATA_2"
-		(at 198.12 88.9 0)
+		(at 199.39 74.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3593,7 +3095,7 @@
 		(uuid "bc53cf52-4a8f-415d-9cf3-e4dab9f7c1ea")
 	)
 	(label "RGB_DATA_1"
-		(at 198.12 62.23 0)
+		(at 199.39 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3622,16 +3124,6 @@
 		)
 		(uuid "c8ce368e-ebb3-495d-a745-08508c9d30a8")
 	)
-	(label "+3V3"
-		(at 118.11 40.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d7d4dc81-793f-4f3e-a523-f56413ed7782")
-	)
 	(label "GND"
 		(at 241.3 77.47 0)
 		(effects
@@ -3652,16 +3144,6 @@
 		)
 		(uuid "e184d992-eccf-4267-b66a-adf104c6e78b")
 	)
-	(label "+3V3"
-		(at 198.12 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ebd51edf-97fd-43ae-914a-6acf8408bfdd")
-	)
 	(label "+5V"
 		(at 163.83 40.64 0)
 		(effects
@@ -3681,164 +3163,6 @@
 			(justify left bottom)
 		)
 		(uuid "fbcc554f-1ab7-426e-a3b6-5b53a49283b0")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 209.55 45.72 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "04409dda-587b-4e39-a7a2-c5dbfbfc770a")
-		(property "Reference" "R3"
-			(at 209.55 39.37 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R4K7"
-			(at 209.55 41.91 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 209.55 47.498 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 209.55 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 209.55 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "de1485a6-9e2e-424b-bbef-18dbc8776ba8")
-		)
-		(pin "1"
-			(uuid "83408c67-846b-46a7-bcca-c1ee66d4ec43")
-		)
-		(instances
-			(project "Schematics"
-				(path "/582e867b-2adb-42a5-ab29-50b27088c313"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 121.92 40.64 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0f7159ce-beab-4792-ab95-6ab5a8bf17a9")
-		(property "Reference" "#FLG03"
-			(at 121.92 38.735 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 121.92 35.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 121.92 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "44bda9a7-2015-4529-bc4e-f8e40bdb88dc")
-		)
-		(instances
-			(project "Schematics"
-				(path "/582e867b-2adb-42a5-ab29-50b27088c313"
-					(reference "#FLG03")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Transistor_FET:IRLB8721PBF")
@@ -4010,7 +3334,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 232.41 74.93 90)
+		(at 226.06 74.93 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4021,7 +3345,7 @@
 		(fields_autoplaced yes)
 		(uuid "34f347f8-4a21-412e-82fb-826bfc5c3d65")
 		(property "Reference" "R8"
-			(at 232.41 68.58 90)
+			(at 226.06 68.58 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4031,7 +3355,7 @@
 			)
 		)
 		(property "Value" "R330"
-			(at 232.41 71.12 90)
+			(at 226.06 71.12 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4041,7 +3365,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 232.41 76.708 90)
+			(at 226.06 76.708 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4052,7 +3376,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 232.41 74.93 0)
+			(at 226.06 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4063,7 +3387,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 232.41 74.93 0)
+			(at 226.06 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4670,174 +3994,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:2N7000")
-		(at 210.82 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6b72c2ea-e753-4134-a0b9-31920ad4cbbb")
-		(property "Reference" "Q2"
-			(at 217.17 53.3399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N7000"
-			(at 217.17 55.8799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 215.9 56.515 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/70226/70226.pdf"
-			(at 215.9 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92"
-			(at 210.82 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "46639398-f104-4555-ab2e-98740245101d")
-		)
-		(pin "1"
-			(uuid "ba620242-3733-4d8a-b15c-602d0ae49cc0")
-		)
-		(pin "3"
-			(uuid "9bbaaf4d-5bac-4f52-be66-3b6f7e670a7c")
-		)
-		(instances
-			(project "Schematics"
-				(path "/582e867b-2adb-42a5-ab29-50b27088c313"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 209.55 72.39 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6cb0be5f-320a-419b-b4bf-d27f4a869754")
-		(property "Reference" "R7"
-			(at 209.55 66.04 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R4K7"
-			(at 209.55 68.58 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 209.55 74.168 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 209.55 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 209.55 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "4860b4fa-35a6-44e1-bc89-d4b6d559bcdd")
-		)
-		(pin "1"
-			(uuid "50b13146-1bd8-4717-9090-16547e129578")
-		)
-		(instances
-			(project "Schematics"
-				(path "/582e867b-2adb-42a5-ab29-50b27088c313"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 175.26 45.72 0)
 		(unit 1)
@@ -5330,96 +4486,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:2N7000")
-		(at 210.82 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cd9af5bf-d3ba-4d85-a935-c5463c3c04d1")
-		(property "Reference" "Q4"
-			(at 217.17 80.0099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N7000"
-			(at 217.17 82.5499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 215.9 83.185 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/70226/70226.pdf"
-			(at 215.9 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92"
-			(at 210.82 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0b2b21a0-5e73-4f5f-8b55-e5aadc06625f")
-		)
-		(pin "1"
-			(uuid "a8d55409-1429-433f-8591-d8a762202d4a")
-		)
-		(pin "3"
-			(uuid "28104797-af47-4d4c-8268-7b6c450e9ecf")
-		)
-		(instances
-			(project "Schematics"
-				(path "/582e867b-2adb-42a5-ab29-50b27088c313"
-					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 232.41 48.26 90)
+		(at 227.33 48.26 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5430,7 +4498,7 @@
 		(fields_autoplaced yes)
 		(uuid "d84435b3-d414-45d1-890c-654d4f993e71")
 		(property "Reference" "R4"
-			(at 232.41 41.91 90)
+			(at 227.33 41.91 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5440,7 +4508,7 @@
 			)
 		)
 		(property "Value" "R330"
-			(at 232.41 44.45 90)
+			(at 227.33 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5450,7 +4518,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 232.41 50.038 90)
+			(at 227.33 50.038 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5461,7 +4529,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 232.41 48.26 0)
+			(at 227.33 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5472,7 +4540,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 232.41 48.26 0)
+			(at 227.33 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
