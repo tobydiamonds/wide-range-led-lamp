@@ -28,7 +28,7 @@ A LED lamp system using an ESP32 (NodeMCU 38-pin devkit) running WLED firmware t
 - Form factor: NodeMCU plugs into 2×15 female pin headers on the carrier PCB
 - Power: 5V pin fed from 12V→5V regulator on carrier board
 - RGB output 1: GPIO26 → 330Ω series resistor → WS2811 data shelf 1
-- RGB output 2: GPIO33 → 330Ω series resistor → WS2811 data shelf 2
+- RGB output 2: GPIO13 → 330Ω series resistor → WS2811 data shelf 2 (bodge wire from D13; GPIO33 failed RMT output)
 - White output 1: GPIO27 → PWM via IRLB8721 N-channel MOSFET (shelf 1)
 - White output 2: GPIO25 → PWM via IRLB8721 N-channel MOSFET (shelf 2)
 - RGB signal: Direct 3.3V drive with 330Ω series resistor (no level shifter — tested OK with WS2811 at 3.3V)
@@ -69,7 +69,7 @@ A LED lamp system using an ESP32 (NodeMCU 38-pin devkit) running WLED firmware t
 | GPIO | NodeMCU Pin | Function |
 |------|-------------|----------|
 | 26   | D26         | RGB data shelf 1 |
-| 33   | D33         | RGB data shelf 2 |
+| 13   | D13         | RGB data shelf 2 (bodge wire; GPIO33 unusable) |
 | 27   | D27         | White PWM shelf 1 |
 | 25   | D25         | White PWM shelf 2 |
 | 23   | GPIO23      | WLED button (active low, internal pull-up) |
@@ -90,17 +90,19 @@ Note: All selected GPIOs are free of boot-mode side effects and support RMT (for
 
 | Output | Type | GPIO | Color Order | Start | Length |
 |--------|------|------|-------------|-------|--------|
-| 1 | WS281x | 26 | BRG | 0 | 50 |
-| 2 | PWM White | 27 | — | 50 | 1 |
-
-(Shelf 2 would add outputs 3+4 on GPIO33 and GPIO25 with appropriate start offsets)
+| 1 | WS281x | 26 | BRG | 0 | 30 |
+| 2 | PWM White | 27 | — | 30 | 1 |
+| 3 | WS281x | 13 | BRG | 31 | 30 |
+| 4 | PWM White | 25 | — | 61 | 1 |
 
 ### Segments
 
 | Segment | Start | Stop | Function |
 |---------|-------|------|----------|
-| 0 | 0 | 50 | RGB shelf 1 |
-| 1 | 50 | 51 | White shelf 1 |
+| 0 | 0 | 30 | RGB shelf 1 |
+| 1 | 30 | 31 | White shelf 1 |
+| 2 | 31 | 61 | RGB shelf 2 |
+| 3 | 61 | 62 | White shelf 2 |
 
 ### Boot preset
 
