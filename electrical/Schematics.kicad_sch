@@ -2287,11 +2287,11 @@
 		(uuid "d85e84c3-caa4-4e65-8e70-fd470d2f6e2f")
 	)
 	(no_connect
-		(at 124.46 63.5)
+		(at 160.02 66.04)
 		(uuid "04251811-187f-42c9-b678-1d06df23be2b")
 	)
 	(no_connect
-		(at 124.46 73.66)
+		(at 160.02 68.58)
 		(uuid "1cdfb0d7-587f-4685-ad6f-4f96f088d70b")
 	)
 	(no_connect
@@ -2331,7 +2331,7 @@
 		(uuid "99cc5e3e-5a23-4c29-9787-97c7f79a7f71")
 	)
 	(no_connect
-		(at 124.46 60.96)
+		(at 160.02 60.96)
 		(uuid "a34a3f86-8773-4aa7-a8f0-9bfd41092a07")
 	)
 	(no_connect
@@ -2343,7 +2343,7 @@
 		(uuid "bd67e45d-e9dd-4324-aaff-38106e118173")
 	)
 	(no_connect
-		(at 124.46 66.04)
+		(at 160.02 58.42)
 		(uuid "bf2da11a-4f46-4b60-95c4-49ad55e567c7")
 	)
 	(no_connect
@@ -2456,7 +2456,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 68.58) (xy 165.1 68.58)
+			(xy 124.46 63.5) (xy 116.84 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2536,7 +2536,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 66.04) (xy 165.1 66.04)
+			(xy 124.46 73.66) (xy 116.84 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2586,7 +2586,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 60.96) (xy 165.1 60.96)
+			(xy 124.46 66.04) (xy 116.84 66.04)
 		)
 		(stroke
 			(width 0)
@@ -2906,7 +2906,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 58.42) (xy 165.1 58.42)
+			(xy 124.46 60.96) (xy 116.84 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2925,12 +2925,12 @@
 		(uuid "0de14d2d-c1b7-4457-810b-e7352885f1a7")
 	)
 	(label "RGB_DATA_2"
-		(at 165.1 66.04 0)
+		(at 116.84 73.66 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "15c12b22-d7b0-4508-813c-8735fd1eb7bc")
 	)
@@ -2955,32 +2955,32 @@
 		(uuid "35d23abb-6eb4-4c19-9af0-8a5f30d76990")
 	)
 	(label "WHITE_PWM_1"
-		(at 165.1 60.96 0)
+		(at 116.84 66.04 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "3c08b67b-dfcd-4a60-b84c-0201d2d9ade5")
 	)
 	(label "WHITE_PWM_2"
-		(at 165.1 58.42 0)
+		(at 116.84 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "45914c9a-4b47-4a9c-a1e9-04cd0ab8b5ff")
 	)
 	(label "RGB_DATA_1"
-		(at 165.1 68.58 0)
+		(at 116.84 63.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "50d2bb39-51fd-49ab-ba3c-a468346827ca")
 	)
